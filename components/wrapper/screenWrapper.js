@@ -9,34 +9,42 @@ import {
     Keyboard 
 } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
+
 export const ScreenWrapper = ({ children, type }) => {
     // Determine if the child component have a flatList or not
-    const isFlatList = type === "flatlist";
+    const isFlatList = type === 'flatlist';
     // Keyboard behavior based on the platform
     const behavior = Platform.OS === 'ios' ? 'padding' : 'height';
-    // KeyboardAV - When the keyboard is opened, scrolled screen content smoothly
-    // SafeAV - Prevented notches on some phones from conflicting with screen content
-    // LinearGradient - Made attractive Background  by using Linear Gradient for User Interfaces
-    // TouchableWithoutFeedback - Provided the keyboard to close when touching any non-interactive area
+
     return (
         <KeyboardAvoidingView 
             behavior={behavior} 
             keyboardVerticalOffset={0} 
             style={styles.keyboardContainer}
         >  
+        {/* When the keyboard is opened, scrolled screen content smoothly */}
             <SafeAreaView style={styles.safeAreaView}>
+            {/* Prevented notches on some phones from conflicting with screen content */}
                 <LinearGradient 
+                
                     colors={['#FFB347', '#FFCC33']}
                     style={styles.linearGradient}
                     start={{ x: 0, y: 0 }}
                     end={{ x: 1, y: 1 }}
                 >
+                {/* Made attractive Background  by using Linear Gradient for User Interfaces */}
                     <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
+                    {/* Provided the keyboard to close when touching any non-interactive area */}
                         {isFlatList ? (
+                            //  If Content is flatlist no need scrollView
                             <View style={styles.contentContainer}>{children}</View>
                         ) : (
-                            <ScrollView showsVerticalScrollIndicator={false}>
-                                <View style={styles.contentContainer}>{children}</View>
+                            //  Otherwise display content in scrollView
+                            <ScrollView 
+                                showsVerticalScrollIndicator={false} 
+                                contentContainerStyle={styles.scrollViewContent}
+                            >
+                                {children}
                             </ScrollView>
                         )}
                     </TouchableWithoutFeedback>
@@ -44,7 +52,7 @@ export const ScreenWrapper = ({ children, type }) => {
             </SafeAreaView>
         </KeyboardAvoidingView>
     );
-}
+    }
 
 const styles = StyleSheet.create({
     keyboardContainer: {
@@ -56,12 +64,12 @@ const styles = StyleSheet.create({
     linearGradient: {
         flex: 1,
     },
-    contentContainer: {
-        flex: 1,
-        paddingTop: 10,
-        paddingBottom: 70,
-        paddingHorizontal: 5,
-    },
-});
+    scrollViewContent: {
+        flexGrow: 1,  // Allow the ScrollView to grow vertically to fit its content.
+        paddingTop: 10,  
+        paddingBottom: 50, 
+    }
+}
+)
 
 
