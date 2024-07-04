@@ -7,16 +7,17 @@ export default function App() {
     <ScreenWrapper>
       <StatusBar style="auto" />
       <Text style={styles.text}>Custom Gradient Wrapper</Text>
-      <View style={[styles.content, { backgroundColor: "red" }]} />
-      <View style={[styles.content, { backgroundColor: "blue" }]} />
-      <View style={[styles.content, { backgroundColor: "orange" }]} />
-      <View style={[styles.content, { backgroundColor: "green" }]} />
-      <View style={[styles.content, { backgroundColor: "purple" }]} />
+      <View style={[styles.content, { backgroundColor: "#FFF3B5" }]} />
+      <View style={[styles.content, { backgroundColor: "#FFDD7E" }]} />
+      <View style={[styles.content, { backgroundColor: "#FFC145" }]} />
+      <View style={[styles.content, { backgroundColor: "#FFA300" }]} />
+      <View style={[styles.content, { backgroundColor: "#D18000" }]} />
     </ScreenWrapper>
   );
 }
 const styles = StyleSheet.create({
   text: { 
+    padding: 10,
     fontSize: 30,
     fontWeight: "bold", 
     textAlign: "center",

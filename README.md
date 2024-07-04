@@ -1,6 +1,6 @@
 <h1>React Native Component Wrapper</h1>  
 
-This project provides a simple wrapper for integrating a specific component into another React Native application.
+This project provides a wrapper for integrating a specific component into another React Native application.
 
 <h2>Features</h2>
 
@@ -48,4 +48,4 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 This project is developed with contributions from the following individuals: **Deniz Gülbahar (@GitHub denizgulbahar)**
 
-Feel free to customize this template according to your project's specific requirements. **The README.md** file serves as an important document providing information on how to use the component wrapper, integrate components, contribute to the project, and contact the maintainers.
+Feel free to customize this template according to your project's specific requirements. **The README.md** file serves as an important document providing information on how to use the component wrapper, integrate components, and contact the maintainers.

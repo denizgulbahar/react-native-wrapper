@@ -6,9 +6,12 @@ import {
     SafeAreaView, 
     Platform, 
     TouchableWithoutFeedback, 
-    Keyboard 
+    Keyboard, 
+    Dimensions
 } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
+
+const { width } = Dimensions.get('window');
 
 export const ScreenWrapper = ({ children, type }) => {
     // Determine if the child component have a flatList or not
@@ -26,8 +29,7 @@ export const ScreenWrapper = ({ children, type }) => {
             <SafeAreaView style={styles.safeAreaView}>
             {/* Prevented notches on some phones from conflicting with screen content */}
                 <LinearGradient 
-                
-                    colors={['#FFB347', '#FFCC33']}
+                    colors={['#B3E0F2', '#4FACD7']}
                     style={styles.linearGradient}
                     start={{ x: 0, y: 0 }}
                     end={{ x: 1, y: 1 }}
@@ -66,7 +68,7 @@ const styles = StyleSheet.create({
     },
     scrollViewContent: {
         flexGrow: 1,  // Allow the ScrollView to grow vertically to fit its content.
-        paddingTop: 10,  
+        padding: width>=500 ? 20 : 10,
         paddingBottom: 50, 
     }
 }
