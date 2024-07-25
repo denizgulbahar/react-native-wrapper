@@ -4,15 +4,17 @@ import { ScreenWrapper } from './components/wrapper/screenWrapper';
 
 export default function App() {
   return (
-    <ScreenWrapper>
+    <>
       <StatusBar style="auto" />
-      <Text style={styles.text}>Custom Gradient Wrapper</Text>
-      <View style={[styles.content, { backgroundColor: "#FFF3B5" }]} />
-      <View style={[styles.content, { backgroundColor: "#FFDD7E" }]} />
-      <View style={[styles.content, { backgroundColor: "#FFC145" }]} />
-      <View style={[styles.content, { backgroundColor: "#FFA300" }]} />
-      <View style={[styles.content, { backgroundColor: "#D18000" }]} />
-    </ScreenWrapper>
+      <ScreenWrapper>
+        <Text style={styles.text}>Custom Gradient Wrapper</Text>
+        <View style={[styles.content, { backgroundColor: "#FFF3B5" }]} />
+        <View style={[styles.content, { backgroundColor: "#FFDD7E" }]} />
+        <View style={[styles.content, { backgroundColor: "#FFC145" }]} />
+        <View style={[styles.content, { backgroundColor: "#FFA300" }]} />
+        <View style={[styles.content, { backgroundColor: "#D18000" }]} />
+      </ScreenWrapper>
+    </>
   );
 }
 const styles = StyleSheet.create({
