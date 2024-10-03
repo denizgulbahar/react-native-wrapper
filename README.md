@@ -1,4 +1,4 @@
-<h1>React Native Component Wrapper</h1>  
+<h1>React Native Wrapper</h1>  
 
 This project provides a wrapper for integrating a specific component into another React Native application.
 
@@ -6,7 +6,7 @@ This project provides a wrapper for integrating a specific component into anothe
 
 **Quick Integration:** Seamlessly integrate this component into your Android and iOS mobile applications.
 
-**Customizability:** The application is highly customizable and supports vibrant gradient transitions for backgrounds. It includes features like keyboard avoidance, safe area handling, and dynamic adaptation, especially when integrating FlatList components.
+**Customizability:** The application is highly customizable and supports vibrant gradient transitions for backgrounds. Users can easily adjust gradient colors to match their branding or aesthetic preferences, creating a personalized experience. Gradient direction can be modified, allowing users to choose the flow of colors (e.g., linear, radial), enhancing the visual appeal and contextual relevance of the design. Additionally, the opacity of the gradients can be fine-tuned to achieve the desired level of transparency, which helps in emphasizing or de-emphasizing content behind the gradient.
 
 **Ease of Use:** Enables straightforward integration for easy usage.
 
@@ -30,13 +30,13 @@ To integrate the component wrapper into another project, follow these steps:
 
 1. Import the wrapper component into your project:
 ```zh 
-import { ComponentWrapper } from 'react-native-wrapper';
+import { ScreenWrapper } from 'react-native-wrapper';
 ```
 Use the wrapper to integrate other components:
 ```zh 
-<ComponentWrapper>
+<ScreenWrapper>
   {/* Add the component you want to wrap here */}
-</ComponentWrapper>
+</ScreenWrapper>
 ```
 <h2>License</h2>
 This project is licensed under the MIT License - see the LICENSE file for details.
