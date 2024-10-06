@@ -1,12 +1,29 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { FlatList, StyleSheet, Text, View } from 'react-native';
 import { ScreenWrapper } from './components/wrapper/screenWrapper';
 export default function App() {
 
+  const array = [
+    "header", "footer", "content", "sidebar", "menu", "navigation", 
+    "login", "signup", "profile", "settings"
+  ];
+  const renderItem = ({item}) => (
+    <View style={styles.renderItem}>
+      <Text style={{ textAlign: "center" }}>
+        {item}
+      </Text>
+    </View>
+  )
+  const gradientColors= ['#FFA500', '#FF4500', '#00BFFF']
+  const gradientDirection = {
+    start: { x: 1, y: 0 }, // Sağ üst köşe
+    end: { x: 0, y: 1 } // Sol alt köşe
+  };
+  
   return (
     <>
       <StatusBar style="auto" />
-      <ScreenWrapper>
+      <ScreenWrapper gradientDirection={gradientDirection} gradientColors={gradientColors}>
         <Text style={styles.text}>Custom Gradient Wrapper</Text>
          {/* First Row */}
          <View style={styles.row}>
@@ -15,16 +32,24 @@ export default function App() {
         </View>
 
         {/* Second Item */}
-        <View style={[styles.content, { backgroundColor: "#FFDD7E" }]} />
+        <View style={[styles.content, { backgroundColor: "#FFC145" }]} />
 
         {/* Second Row */}
         <View style={styles.row}>
-          <View style={[styles.content, { flex: 2, backgroundColor: "#FFA300" }]} />
+          <View style={[styles.content, { flex: 2, backgroundColor: "#FF4500" }]} />
           <View style={[styles.content, { flex: 3, backgroundColor: "#FFDD7E" }]} />
         </View>
 
         {/* Third Item */}
-        <View style={[styles.content, { height: 150, backgroundColor: "#FFA300" }]} />
+        <View style={[styles.content, { height: 150, backgroundColor: "#00BFFF" }]} />
+
+        <FlatList
+          data={array}
+          style={{ flex: 1 }}
+          contentContainerStyle={styles.flatlistContentContainer}
+          keyExtractor={(item, index) => `${item.name}-${index}`}
+          renderItem={renderItem}
+        />
       </ScreenWrapper>
     </>
   );
@@ -54,6 +79,19 @@ const styles = StyleSheet.create({
     shadowColor: '#000',
     shadowOffset: { width: 0, height: 2 }, 
     shadowOpacity: 0.2, shadowRadius: 5
+  },
+  renderItem: {
+    height: 60, 
+    justifyContent: "center", 
+    alignItems: "center" 
+  },
+  flatlistContentContainer: {
+    padding: 10, 
+    borderRadius: 20, 
+    backgroundColor: "#FFC145", 
+    width: "80%", 
+    justifyContent:"center", 
+    alignSelf:"center"
   }
 })
 

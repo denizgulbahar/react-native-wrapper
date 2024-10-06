@@ -1,7 +1,20 @@
 <h1>React Native Wrapper</h1>  
 
-This project provides a wrapper for integrating a specific component into another React Native application.
+This project is a component wrapping screens in React Native applications with a gradient transition for mobile and tablet platforms.
 
+![1](https://github.com/user-attachments/assets/31a794f8-81bb-4187-9a35-46df3ea4c548)  &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;
+![3](https://github.com/user-attachments/assets/45621f67-fbf1-4225-8c73-74a870255b20)
+
+&nbsp;
+
+![2](https://github.com/user-attachments/assets/84c80c0d-6360-44e2-ae9e-a7e1d796e88f)
+ 
+&nbsp;
+
+&nbsp;
+
+
+ 
 <h2>Features</h2>
 
 **Quick Integration:** Seamlessly integrate this component into your Android and iOS mobile applications.

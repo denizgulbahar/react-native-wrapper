@@ -25,7 +25,7 @@ export const ScreenWrapper = ({
     // Keyboard behavior based on the platform
     const behavior = Platform.OS === 'ios' ? 'padding' : 'height';
     // Default gradientColors
-    const defaultColors = ['#B3E0F2', '#4FACD7']
+    const defaultColors = ['#B3E0F2', '#0056A3'];
 
     return (
         <KeyboardAvoidingView 
