@@ -65,6 +65,9 @@ export const ScreenWrapper = ({
     }
 
 const styles = StyleSheet.create({
+    contentContainer: {
+        flex: 1,
+    },
     keyboardContainer: {
         flex: 1,
     },
