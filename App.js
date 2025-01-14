@@ -23,7 +23,10 @@ export default function App() {
   return (
     <>
       <StatusBar style="auto" />
-      <ScreenWrapper gradientDirection={gradientDirection} gradientColors={gradientColors}>
+      <ScreenWrapper 
+        gradientDirection={gradientDirection} 
+        gradientColors={gradientColors}
+      >
         <Text style={styles.text}>Custom Gradient Wrapper</Text>
          {/* First Row */}
          <View style={styles.row}>
@@ -44,6 +47,7 @@ export default function App() {
         <View style={[styles.content, { height: 150, backgroundColor: "#00BFFF" }]} />
 
         <FlatList
+          scrollEnabled={false}
           data={array}
           style={{ flex: 1 }}
           contentContainerStyle={styles.flatlistContentContainer}
