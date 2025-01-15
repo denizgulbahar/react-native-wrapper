@@ -51,7 +51,7 @@ export const ScreenWrapper = ({
             </SafeAreaView>
         </KeyboardAvoidingView>
     );
-    }
+}
 
 const styles = StyleSheet.create({
     keyboardContainer: {

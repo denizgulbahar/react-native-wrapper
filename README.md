@@ -45,7 +45,7 @@ To integrate the component wrapper into another project, follow these steps:
 ```zh 
 import { ScreenWrapper } from 'react-native-wrapper';
 ```
-Use the wrapper to integrate other components:
+2. Use the wrapper to integrate other components:
 ```zh 
 <ScreenWrapper>
   {/* Add the component you want to wrap here */}
