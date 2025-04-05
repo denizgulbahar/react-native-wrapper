@@ -14,16 +14,16 @@ export default function App() {
       </Text>
     </View>
   )
-  // const gradientColors= ['#FFA500', '#FF4500', '#00BFFF']
-  // const gradientDirection = {
-  //   start: { x: 1, y: 0 }, // Sağ üst köşe
-  //   end: { x: 0, y: 1 } // Sol alt köşe
-  // };
-  const gradientColors= ['#4B9F6F', '#F1D02B', '#A8D5BA']
+  const gradientColors= ['#FFA500', '#FF4500', '#00BFFF']
   const gradientDirection = {
-    start: { x: 0, y: 0 }, // Başlangıç noktası (merkez)
-    end: { x: 1, y: 0}        // Bitiş noktası (sağ alt köşe)
+    start: { x: 1, y: 0 }, // Sağ üst köşe
+    end: { x: 0, y: 1 } // Sol alt köşe
   };
+  // const gradientColors= ['#4B9F6F', '#F1D02B', '#A8D5BA']
+  // const gradientDirection = {
+  //   start: { x: 0, y: 0 }, // Başlangıç noktası (merkez)
+  //   end: { x: 1, y: 0}        // Bitiş noktası (sağ alt köşe)
+  // };
   
   return (
     <>
